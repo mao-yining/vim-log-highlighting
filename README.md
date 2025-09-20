@@ -2,6 +2,9 @@
 
 ![Log highlighting example](doc/screenshot.jpg)
 
+> [!Warning]
+> This plugin has been merged into Vim in the latest version.
+
 ## Overview
 
 Provides syntax highlighting for generic log files in VIM.
@@ -15,21 +18,19 @@ Some of the highlighted elements are:
 - SysLog format columns
 - XML Tags
 
-
-
 ## Installation
 
 ### [VimPlug](https://github.com/junegunn/vim-plug)
 
-Add `Plug 'mtdl9/vim-log-highlighting'` to your `~/.vimrc` and run `PlugInstall`.
+Add `Plug 'mao-yining/vim-log-highlighting'` to your `~/.vimrc` and run `PlugInstall`.
 
 ### [Vundle](https://github.com/gmarik/Vundle.vim)
 
-Add `Plugin 'mtdl9/vim-log-highlighting'` to your `~/.vimrc` and run `PluginInstall`.
+Add `Plugin 'mao-yining/vim-log-highlighting'` to your `~/.vimrc` and run `PluginInstall`.
 
 ### [Pathogen](https://github.com/tpope/vim-pathogen)
 
-    $ git clone https://github.com/mtdl9/vim-log-highlighting ~/.vim/bundle/vim-log-highlighting
+    $ git clone https://github.com/mao-yining/vim-log-highlighting ~/.vim/bundle/vim-log-highlighting
 
 ### Manual Install
 
