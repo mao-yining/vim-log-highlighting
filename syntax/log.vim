@@ -2,7 +2,7 @@
 " Language:         Generic log file
 " Maintainer:       Mao-Yining <https://github.com/mao-yining>
 " Former Maintainer:	MTDL9 <https://github.com/MTDL9>
-" Latest Revision:  2025-10-03
+" Latest Revision:  2025-10-31
 
 if exists('b:current_syntax')
   finish
@@ -31,9 +31,9 @@ syn match logFloatNumber  '\<\d.\d\+[eE]\?\>'
 syn keyword logBoolean    true false
 syn keyword logNull       null nil nullptr none
 
-syn region logString      start=/"/ end=/"/ end=/$/ skip=/\\./ contains=logJavaError
-" Quoted strings, but no match on quotes like "don't", "plurals' elements"
-syn region logString      start=/'\(s \|t \| \w\)\@!/ end=/'/ end=/$/ end=/s / skip=/\\./ contains=logJavaError
+" Quoted strings
+syn region logString start=+\'+ skip=+\\'+  end=+\'+ contains=logJavaError
+syn region logString start=+\"+ skip=+\\"+  end=+\"+ contains=logJavaError
 
 
 " Dates and Times
