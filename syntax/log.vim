@@ -22,11 +22,12 @@ syn match logSeparator display '- - '
 
 " Constants
 "---------------------------------------------------------------------------
-syn match logNumber       '\<-\?\d\+\>'
-syn match logHexNumber    '\<0[xX]\x\+\>'
-syn match logHexNumber    '\<\d\x\+\>'
-syn match logBinaryNumber '\<0[bB][01]\+\>'
-syn match logFloatNumber  '\<\d.\d\+[eE]\?\>'
+syn match logNumber display '\<-\?\d\+\>'
+syn match logHexNumber display '\<0[xX][0-9a-fA-F]\+\>'
+syn match logBinaryNumber display '\<0[bB][01]\+\>'
+
+syn match logFloatNumber display '[+-]\=\<\d\+\.\d*\([eE][-+]\=\d\+\)\=\>'
+syn match logFloatNumber display '[+-]\=\<\d\+[eE][-+]\=\d\+\>'
 
 syn keyword logBoolean    true false
 syn keyword logNull       null nil nullptr none
